@@ -85,6 +85,9 @@ void PROGRAM0_init__(PROGRAM0 *data__, BOOL retain) {
   F_TRIG_init__(&data__->F_TRIG0,retain);
   F_TRIG_init__(&data__->F_TRIG1,retain);
   TON_init__(&data__->TON0,retain);
+  TON_init__(&data__->TON1,retain);
+  TON_init__(&data__->TON2,retain);
+  F_TRIG_init__(&data__->F_TRIG2,retain);
 }
 
 // Code part
@@ -149,14 +152,43 @@ void PROGRAM0_body__(PROGRAM0 *data__) {
   if (__GET_VAR(data__->ITEM_DETECTED,)) {
     __SET_VAR(data__->,CLAMP_BASE,,__BOOL_LITERAL(FALSE));
   };
-  __SET_VAR(data__->TON0.,IN,,__GET_VAR(data__->ITEM_DETECTED,));
-  __SET_VAR(data__->TON0.,PT,,__time_to_timespec(1, 500, 0, 0, 0, 0));
+  __SET_VAR(data__->TON0.,IN,,((!(__GET_VAR(data__->MOVE_Z,)) && __GET_VAR(data__->GRAB,)) && __GET_VAR(data__->ITEM_DETECTED,)));
+  __SET_VAR(data__->TON0.,PT,,__time_to_timespec(1, 250, 0, 0, 0, 0));
   TON_body__(&data__->TON0);
-  if (__GET_VAR(data__->TON0.Q,)) {
+  if ((!(__GET_VAR(data__->MOVING_Z,)) && __GET_VAR(data__->TON0.Q,))) {
     __SET_VAR(data__->,MOVE_X,,__BOOL_LITERAL(TRUE));
   };
-  if (((!(__GET_VAR(data__->MOVING_X,)) && __GET_VAR(data__->GRAB,)) && __GET_VAR(data__->MOVE_X,))) {
+  __SET_VAR(data__->TON1.,IN,,(((__GET_VAR(data__->MOVE_X,) && !(__GET_VAR(data__->MOVE_Z,))) && __GET_VAR(data__->GRAB,)) && __GET_VAR(data__->ITEM_DETECTED,)));
+  __SET_VAR(data__->TON1.,PT,,__time_to_timespec(1, 250, 0, 0, 0, 0));
+  TON_body__(&data__->TON1);
+  if ((!(__GET_VAR(data__->MOVING_X,)) && __GET_VAR(data__->TON1.Q,))) {
     __SET_VAR(data__->,MOVE_Z,,__BOOL_LITERAL(TRUE));
+  };
+  __SET_VAR(data__->TON2.,IN,,(((__GET_VAR(data__->MOVE_Z,) && __GET_VAR(data__->MOVE_X,)) && __GET_VAR(data__->GRAB,)) && __GET_VAR(data__->ITEM_DETECTED,)));
+  __SET_VAR(data__->TON2.,PT,,__time_to_timespec(1, 250, 0, 0, 0, 0));
+  TON_body__(&data__->TON2);
+  if ((!(__GET_VAR(data__->MOVING_Z,)) && __GET_VAR(data__->TON2.Q,))) {
+    __SET_VAR(data__->,GRAB,,__BOOL_LITERAL(FALSE));
+  };
+  if ((((__GET_VAR(data__->MOVE_Z,) && __GET_VAR(data__->MOVE_X,)) && !(__GET_VAR(data__->GRAB,))) && __GET_VAR(data__->ITEM_DETECTED,))) {
+    __SET_VAR(data__->,MOVE_Z,,__BOOL_LITERAL(FALSE));
+  };
+  if ((((__GET_VAR(data__->MOVE_Z,) && __GET_VAR(data__->MOVE_X,)) && !(__GET_VAR(data__->GRAB,))) && __GET_VAR(data__->ITEM_DETECTED,))) {
+    __SET_VAR(data__->,MOVE_X,,__BOOL_LITERAL(FALSE));
+  };
+  if ((((__GET_VAR(data__->MOVE_Z,) && __GET_VAR(data__->MOVE_X,)) && !(__GET_VAR(data__->GRAB,))) && __GET_VAR(data__->ITEM_DETECTED,))) {
+    __SET_VAR(data__->,POS_RAISE_BASE,,__BOOL_LITERAL(TRUE));
+  };
+  if ((__GET_VAR(data__->POS_AT_LIMIT_BASE,) && __GET_VAR(data__->POS_RAISE_BASE,))) {
+    __SET_VAR(data__->,BASES_CONVEYOR,,__BOOL_LITERAL(TRUE));
+  };
+  if ((__GET_VAR(data__->POS_AT_LIMIT_BASE,) && __GET_VAR(data__->POS_RAISE_BASE,))) {
+    __SET_VAR(data__->,LIDS_CONVEYOR,,__BOOL_LITERAL(TRUE));
+  };
+  __SET_VAR(data__->F_TRIG2.,CLK,,(__GET_VAR(data__->PART_LEAVING,) && __GET_VAR(data__->POS_AT_LIMIT_BASE,)));
+  F_TRIG_body__(&data__->F_TRIG2);
+  if (__GET_VAR(data__->F_TRIG2.Q,)) {
+    __SET_VAR(data__->,POS_RAISE_BASE,,__BOOL_LITERAL(FALSE));
   };
 
   goto __end;
