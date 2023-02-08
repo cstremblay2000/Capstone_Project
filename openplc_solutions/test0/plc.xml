@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2023-01-25T13:19:30"/>
+  <contentHeader name="Unnamed" modificationDateTime="2023-01-25T21:28:01">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="10" y="10"/>
+      </fbd>
+      <ld>
+        <scaling x="10" y="10"/>
+      </ld>
+      <sfc>
+        <scaling x="10" y="10"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="main" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Conveyor" address="%QX100.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Prox" address="%IX100.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="StartButton" address="%IX100.1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <LD>
+            <leftPowerRail localId="8" width="10" height="40">
+              <position x="60" y="90"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="10" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <contact localId="9" negated="false" width="21" height="20">
+              <position x="188" y="100"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="8">
+                  <position x="188" y="110"/>
+                  <position x="70" y="110"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Prox</variable>
+            </contact>
+            <coil localId="10" negated="false" storage="reset" width="21" height="20">
+              <position x="410" y="100"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="9">
+                  <position x="410" y="110"/>
+                  <position x="209" y="110"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Conveyor</variable>
+            </coil>
+            <rightPowerRail localId="11" width="10" height="40">
+              <position x="508" y="90"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="10">
+                  <position x="508" y="110"/>
+                  <position x="431" y="110"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <leftPowerRail localId="12" width="10" height="40">
+              <position x="60" y="210"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="10" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <contact localId="13" negated="false" width="21" height="20">
+              <position x="188" y="220"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="12">
+                  <position x="188" y="230"/>
+                  <position x="70" y="230"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>StartButton</variable>
+            </contact>
+            <coil localId="14" negated="false" storage="set" width="21" height="20">
+              <position x="418" y="220"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="13">
+                  <position x="418" y="230"/>
+                  <position x="209" y="230"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>Conveyor</variable>
+            </coil>
+            <rightPowerRail localId="15" width="10" height="40">
+              <position x="528" y="210"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="14">
+                  <position x="528" y="230"/>
+                  <position x="439" y="230"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+          </LD>
+        </body>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="Config0">
+        <resource name="Res0">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="main"/>
+          </task>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>
