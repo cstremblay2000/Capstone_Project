@@ -79,7 +79,8 @@ typedef struct {
   TON TON0;
   TON TON1;
   TON TON2;
-  F_TRIG F_TRIG2;
+  F_TRIG F_TRIG3;
+  R_TRIG R_TRIG0;
 
 } PROGRAM0;
 

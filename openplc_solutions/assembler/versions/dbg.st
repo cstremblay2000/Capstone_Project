@@ -48,7 +48,8 @@ PROGRAM program0
     TON0 : TON;
     TON1 : TON;
     TON2 : TON;
-    F_TRIG2 : F_TRIG;
+    F_TRIG3 : F_TRIG;
+    R_TRIG0 : R_TRIG;
   END_VAR
 
   IF start THEN
@@ -107,36 +108,40 @@ PROGRAM program0
   IF item_detected THEN
     clamp_base := FALSE; (*reset*)
   END_IF;
-  TON0(IN := NOT(move_z) AND grab AND item_detected, PT := T#250ms);
+  TON0(IN := NOT(move_z) AND grab AND item_detected, PT := T#750ms);
   IF NOT(moving_z) AND TON0.Q THEN
     move_x := TRUE; (*set*)
   END_IF;
-  TON1(IN := move_x AND NOT(move_z) AND grab AND item_detected, PT := T#250ms);
+  TON1(IN := move_x AND NOT(move_z) AND grab AND item_detected, PT := T#750ms);
   IF NOT(moving_x) AND TON1.Q THEN
     move_z := TRUE; (*set*)
   END_IF;
-  TON2(IN := move_z AND move_x AND grab AND item_detected, PT := T#250ms);
+  TON2(IN := move_z AND move_x AND grab AND item_detected, PT := T#750ms);
   IF NOT(moving_z) AND TON2.Q THEN
     grab := FALSE; (*reset*)
   END_IF;
   IF move_z AND move_x AND NOT(grab) AND item_detected THEN
-    move_z := FALSE; (*reset*)
-  END_IF;
-  IF move_z AND move_x AND NOT(grab) AND item_detected THEN
-    move_x := FALSE; (*reset*)
-  END_IF;
-  IF move_z AND move_x AND NOT(grab) AND item_detected THEN
     pos_raise_base := TRUE; (*set*)
   END_IF;
-  IF pos_at_limit_base AND pos_raise_base THEN
+  IF pos_raise_base THEN
+    move_z := FALSE; (*reset*)
+  END_IF;
+  IF pos_raise_base THEN
+    move_x := FALSE; (*reset*)
+  END_IF;
+  F_TRIG3(CLK := part_leaving);
+  IF F_TRIG3.Q THEN
+    pos_raise_base := FALSE; (*reset*)
+  END_IF;
+  IF reset THEN
+    pos_raise_base := FALSE; (*reset*)
+  END_IF;
+  R_TRIG0(CLK := pos_at_limit_lid AND pos_raise_base);
+  IF R_TRIG0.Q THEN
     bases_conveyor := TRUE; (*set*)
   END_IF;
-  IF pos_at_limit_base AND pos_raise_base THEN
+  IF R_TRIG0.Q THEN
     lids_conveyor := TRUE; (*set*)
-  END_IF;
-  F_TRIG2(CLK := part_leaving AND pos_at_limit_base);
-  IF F_TRIG2.Q THEN
-    pos_raise_base := FALSE; (*reset*)
   END_IF;
 END_PROGRAM
 

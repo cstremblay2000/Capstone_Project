@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
   <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2023-02-06T11:08:00"/>
-  <contentHeader name="Unnamed" modificationDateTime="2023-02-08T11:56:06">
+  <contentHeader name="Unnamed" modificationDateTime="2023-02-08T12:34:49">
     <coordinateInfo>
       <fbd>
         <scaling x="10" y="10"/>
@@ -250,9 +250,14 @@
                 <derived name="TON"/>
               </type>
             </variable>
-            <variable name="F_TRIG2">
+            <variable name="F_TRIG3">
               <type>
                 <derived name="F_TRIG"/>
+              </type>
+            </variable>
+            <variable name="R_TRIG0">
+              <type>
+                <derived name="R_TRIG"/>
               </type>
             </variable>
           </localVars>
@@ -571,16 +576,6 @@
               </connectionPointOut>
               <variable>lids_conveyor</variable>
             </coil>
-            <rightPowerRail localId="210" width="10" height="40">
-              <position x="1358" y="30"/>
-              <connectionPointIn>
-                <relPosition x="0" y="20"/>
-                <connection refLocalId="209">
-                  <position x="1358" y="50"/>
-                  <position x="1299" y="50"/>
-                </connection>
-              </connectionPointIn>
-            </rightPowerRail>
             <block localId="211" typeName="F_TRIG" instanceName="F_TRIG0" width="60" height="40">
               <position x="210" y="120"/>
               <inputVariables>
@@ -860,7 +855,7 @@
               <connectionPointOut>
                 <relPosition x="70" y="10"/>
               </connectionPointOut>
-              <expression>T#250ms</expression>
+              <expression>T#750ms</expression>
             </inVariable>
             <contact localId="348" negated="true" width="21" height="20">
               <position x="490" y="570"/>
@@ -1009,7 +1004,7 @@
               <connectionPointOut>
                 <relPosition x="70" y="10"/>
               </connectionPointOut>
-              <expression>T#250ms</expression>
+              <expression>T#750ms</expression>
             </inVariable>
             <leftPowerRail localId="360" width="10" height="40">
               <position x="20" y="800"/>
@@ -1091,8 +1086,8 @@
                     <connection refLocalId="2">
                       <position x="388" y="840"/>
                       <position x="364" y="840"/>
-                      <position x="364" y="890"/>
-                      <position x="340" y="890"/>
+                      <position x="364" y="880"/>
+                      <position x="340" y="880"/>
                     </connection>
                   </connectionPointIn>
                 </variable>
@@ -1114,11 +1109,11 @@
             <inVariable localId="2" width="70" height="30" negated="false" executionOrderId="0">
               <position x="270" y="870"/>
               <connectionPointOut>
-                <relPosition x="70" y="20"/>
+                <relPosition x="70" y="10"/>
               </connectionPointOut>
-              <expression>T#250ms</expression>
+              <expression>T#750ms</expression>
             </inVariable>
-            <contact localId="368" negated="true" width="20" height="20">
+            <contact localId="368" negated="true" width="21" height="20">
               <position x="508" y="810"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
@@ -1128,21 +1123,21 @@
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>moving_z</variable>
             </contact>
-            <coil localId="369" negated="false" storage="reset" width="20" height="20">
+            <coil localId="369" negated="false" storage="reset" width="21" height="20">
               <position x="618" y="810"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="368">
                   <position x="618" y="820"/>
-                  <position x="528" y="820"/>
+                  <position x="529" y="820"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>grab</variable>
             </coil>
@@ -1152,7 +1147,7 @@
                 <relPosition x="0" y="20"/>
                 <connection refLocalId="369">
                   <position x="688" y="820"/>
-                  <position x="638" y="820"/>
+                  <position x="639" y="820"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
@@ -1162,7 +1157,7 @@
                 <relPosition x="10" y="20"/>
               </connectionPointOut>
             </leftPowerRail>
-            <contact localId="372" negated="false" width="20" height="20">
+            <contact localId="372" negated="false" width="21" height="20">
               <position x="90" y="940"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
@@ -1172,219 +1167,227 @@
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>item_detected</variable>
             </contact>
-            <contact localId="373" negated="true" width="20" height="20">
+            <contact localId="373" negated="true" width="21" height="20">
               <position x="180" y="940"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="372">
                   <position x="180" y="950"/>
-                  <position x="110" y="950"/>
+                  <position x="111" y="950"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>grab</variable>
             </contact>
-            <contact localId="374" negated="false" width="20" height="20">
+            <contact localId="374" negated="false" width="21" height="20">
               <position x="268" y="940"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="373">
                   <position x="268" y="950"/>
-                  <position x="200" y="950"/>
+                  <position x="201" y="950"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>move_x</variable>
             </contact>
-            <contact localId="375" negated="false" width="20" height="20">
-              <position x="360" y="940"/>
+            <contact localId="375" negated="false" width="21" height="20">
+              <position x="340" y="940"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="374">
-                  <position x="360" y="950"/>
-                  <position x="288" y="950"/>
+                  <position x="340" y="950"/>
+                  <position x="289" y="950"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>move_z</variable>
             </contact>
-            <coil localId="377" negated="false" storage="reset" width="20" height="20">
-              <position x="430" y="940"/>
+            <coil localId="393" negated="false" storage="set" width="21" height="20">
+              <position x="428" y="940"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
                 <connection refLocalId="375">
-                  <position x="430" y="950"/>
-                  <position x="380" y="950"/>
+                  <position x="428" y="950"/>
+                  <position x="361" y="950"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>pos_raise_base</variable>
+            </coil>
+            <rightPowerRail localId="394" width="10" height="40">
+              <position x="528" y="930"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="393">
+                  <position x="528" y="950"/>
+                  <position x="449" y="950"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <leftPowerRail localId="395" width="10" height="40">
+              <position x="20" y="1010"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="10" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <contact localId="396" negated="false" width="21" height="20">
+              <position x="88" y="1020"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="395">
+                  <position x="88" y="1030"/>
+                  <position x="30" y="1030"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>pos_raise_base</variable>
+            </contact>
+            <coil localId="397" negated="false" storage="reset" width="21" height="20">
+              <position x="210" y="1020"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="396">
+                  <position x="210" y="1030"/>
+                  <position x="109" y="1030"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>move_z</variable>
             </coil>
-            <coil localId="378" negated="false" storage="reset" width="20" height="20">
-              <position x="518" y="940"/>
+            <rightPowerRail localId="398" width="10" height="40">
+              <position x="328" y="1010"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="397">
+                  <position x="328" y="1030"/>
+                  <position x="231" y="1030"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <leftPowerRail localId="399" width="10" height="40">
+              <position x="20" y="1080"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="10" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <contact localId="400" negated="false" width="21" height="20">
+              <position x="90" y="1090"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="377">
-                  <position x="518" y="950"/>
-                  <position x="450" y="950"/>
+                <connection refLocalId="399">
+                  <position x="90" y="1100"/>
+                  <position x="30" y="1100"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>pos_raise_base</variable>
+            </contact>
+            <coil localId="401" negated="false" storage="reset" width="21" height="20">
+              <position x="208" y="1090"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="400">
+                  <position x="208" y="1100"/>
+                  <position x="111" y="1100"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>move_x</variable>
             </coil>
-            <coil localId="379" negated="false" storage="set" width="20" height="20">
-              <position x="608" y="940"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="378">
-                  <position x="608" y="950"/>
-                  <position x="538" y="950"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>pos_raise_base</variable>
-            </coil>
-            <rightPowerRail localId="380" width="10" height="40">
-              <position x="718" y="930"/>
+            <rightPowerRail localId="402" width="10" height="40">
+              <position x="330" y="1080"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="379">
-                  <position x="718" y="950"/>
-                  <position x="628" y="950"/>
+                <connection refLocalId="401">
+                  <position x="330" y="1100"/>
+                  <position x="229" y="1100"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
-            <leftPowerRail localId="381" width="10" height="40">
-              <position x="20" y="1000"/>
+            <leftPowerRail localId="403" width="10" height="40">
+              <position x="20" y="1150"/>
               <connectionPointOut formalParameter="">
                 <relPosition x="10" y="20"/>
               </connectionPointOut>
             </leftPowerRail>
-            <contact localId="382" negated="false" width="20" height="20">
-              <position x="100" y="1010"/>
+            <contact localId="404" negated="false" width="21" height="20">
+              <position x="88" y="1160"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="381">
-                  <position x="100" y="1020"/>
-                  <position x="30" y="1020"/>
+                <connection refLocalId="403">
+                  <position x="88" y="1170"/>
+                  <position x="30" y="1170"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>pos_raise_base</variable>
             </contact>
-            <contact localId="383" negated="false" width="20" height="20">
-              <position x="240" y="1010"/>
+            <contact localId="405" negated="false" width="21" height="20">
+              <position x="220" y="1160"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="382">
-                  <position x="240" y="1020"/>
-                  <position x="120" y="1020"/>
+                <connection refLocalId="404">
+                  <position x="220" y="1170"/>
+                  <position x="109" y="1170"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
-              <variable>pos_at_limit_base</variable>
+              <variable>pos_at_limit_lid</variable>
             </contact>
-            <coil localId="384" negated="false" storage="set" width="20" height="20">
-              <position x="380" y="1010"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="383">
-                  <position x="380" y="1020"/>
-                  <position x="260" y="1020"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>bases_conveyor</variable>
-            </coil>
-            <coil localId="385" negated="false" storage="set" width="20" height="20">
-              <position x="528" y="1010"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="384">
-                  <position x="528" y="1020"/>
-                  <position x="400" y="1020"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>lids_conveyor</variable>
-            </coil>
-            <rightPowerRail localId="386" width="10" height="40">
-              <position x="718" y="1000"/>
-              <connectionPointIn>
-                <relPosition x="0" y="20"/>
-                <connection refLocalId="385">
-                  <position x="718" y="1020"/>
-                  <position x="548" y="1020"/>
-                </connection>
-              </connectionPointIn>
-            </rightPowerRail>
-            <leftPowerRail localId="387" width="10" height="40">
-              <position x="20" y="1070"/>
+            <leftPowerRail localId="410" width="10" height="40">
+              <position x="20" y="1220"/>
               <connectionPointOut formalParameter="">
                 <relPosition x="10" y="20"/>
               </connectionPointOut>
             </leftPowerRail>
-            <contact localId="388" negated="false" width="20" height="20">
-              <position x="98" y="1080"/>
+            <contact localId="411" negated="false" width="21" height="20">
+              <position x="88" y="1230"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="387">
-                  <position x="98" y="1090"/>
-                  <position x="30" y="1090"/>
+                <connection refLocalId="410">
+                  <position x="88" y="1240"/>
+                  <position x="30" y="1240"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
-                <relPosition x="20" y="10"/>
-              </connectionPointOut>
-              <variable>pos_at_limit_base</variable>
-            </contact>
-            <contact localId="389" negated="false" width="20" height="20">
-              <position x="240" y="1080"/>
-              <connectionPointIn>
-                <relPosition x="0" y="10"/>
-                <connection refLocalId="388">
-                  <position x="240" y="1090"/>
-                  <position x="118" y="1090"/>
-                </connection>
-              </connectionPointIn>
-              <connectionPointOut>
-                <relPosition x="20" y="10"/>
+                <relPosition x="21" y="10"/>
               </connectionPointOut>
               <variable>part_leaving</variable>
             </contact>
-            <block localId="390" typeName="F_TRIG" instanceName="F_TRIG2" width="60" height="40">
-              <position x="320" y="1060"/>
+            <block localId="412" typeName="F_TRIG" instanceName="F_TRIG3" width="60" height="40">
+              <position x="208" y="1210"/>
               <inputVariables>
                 <variable formalParameter="CLK">
                   <connectionPointIn>
                     <relPosition x="0" y="30"/>
-                    <connection refLocalId="389">
-                      <position x="320" y="1090"/>
-                      <position x="260" y="1090"/>
+                    <connection refLocalId="411">
+                      <position x="208" y="1240"/>
+                      <position x="109" y="1240"/>
                     </connection>
                   </connectionPointIn>
                 </variable>
@@ -1398,27 +1401,119 @@
                 </variable>
               </outputVariables>
             </block>
-            <coil localId="391" negated="false" storage="reset" width="20" height="20">
-              <position x="470" y="1080"/>
+            <coil localId="413" negated="false" storage="reset" width="21" height="20">
+              <position x="358" y="1230"/>
               <connectionPointIn>
                 <relPosition x="0" y="10"/>
-                <connection refLocalId="390" formalParameter="Q">
-                  <position x="470" y="1090"/>
-                  <position x="380" y="1090"/>
+                <connection refLocalId="412" formalParameter="Q">
+                  <position x="358" y="1240"/>
+                  <position x="268" y="1240"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>pos_raise_base</variable>
+            </coil>
+            <rightPowerRail localId="414" width="10" height="40">
+              <position x="708" y="1220"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="413">
+                  <position x="708" y="1240"/>
+                  <position x="379" y="1240"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <coil localId="415" negated="false" storage="reset" width="21" height="20">
+              <position x="1060" y="120"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="209">
+                  <position x="1060" y="130"/>
+                  <position x="980" y="130"/>
+                  <position x="980" y="90"/>
+                  <position x="1310" y="90"/>
+                  <position x="1310" y="50"/>
+                  <position x="1299" y="50"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="21" y="10"/>
+              </connectionPointOut>
+              <variable>pos_raise_base</variable>
+            </coil>
+            <rightPowerRail localId="416" width="10" height="40">
+              <position x="1170" y="130"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="415">
+                  <position x="1170" y="150"/>
+                  <position x="1100" y="150"/>
+                  <position x="1100" y="139"/>
+                  <position x="1140" y="139"/>
+                  <position x="1140" y="130"/>
+                  <position x="1081" y="130"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <block localId="417" typeName="R_TRIG" instanceName="R_TRIG0" width="60" height="40">
+              <position x="320" y="1140"/>
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <relPosition x="0" y="30"/>
+                    <connection refLocalId="405">
+                      <position x="320" y="1170"/>
+                      <position x="241" y="1170"/>
+                    </connection>
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables/>
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut>
+                    <relPosition x="60" y="30"/>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+            </block>
+            <coil localId="418" negated="false" storage="set" width="20" height="20">
+              <position x="460" y="1160"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="417" formalParameter="Q">
+                  <position x="460" y="1170"/>
+                  <position x="380" y="1170"/>
                 </connection>
               </connectionPointIn>
               <connectionPointOut>
                 <relPosition x="20" y="10"/>
               </connectionPointOut>
-              <variable>pos_raise_base</variable>
+              <variable>bases_conveyor</variable>
             </coil>
-            <rightPowerRail localId="392" width="10" height="40">
-              <position x="708" y="1070"/>
+            <coil localId="419" negated="false" storage="set" width="20" height="20">
+              <position x="578" y="1160"/>
+              <connectionPointIn>
+                <relPosition x="0" y="10"/>
+                <connection refLocalId="418">
+                  <position x="578" y="1170"/>
+                  <position x="480" y="1170"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <variable>lids_conveyor</variable>
+            </coil>
+            <rightPowerRail localId="420" width="10" height="40">
+              <position x="688" y="1150"/>
               <connectionPointIn>
                 <relPosition x="0" y="20"/>
-                <connection refLocalId="391">
-                  <position x="708" y="1090"/>
-                  <position x="490" y="1090"/>
+                <connection refLocalId="419">
+                  <position x="688" y="1170"/>
+                  <position x="598" y="1170"/>
                 </connection>
               </connectionPointIn>
             </rightPowerRail>
