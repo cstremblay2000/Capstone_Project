@@ -1,7 +1,7 @@
 # Capstone Project
 This code is for my Computing Security Masters Capstone Project of Spring 2023 at Rochester Institute of Technology. The program performs a MITM attack against [Ignition](https://inductiveautomation.com/) by Inductive Automation, and a PLC over Modbus/TCP.
 
-[Jump to Exploit usage](#Running-the-Exploit)
+[Jump to exploit usage section](#Running-the-Exploit)
 
 # How to configure your environment
 The test environment used was 2 Windows 10 PCs, a Linux machine, and a Cisco 3550 Multi-Layer Switch.
