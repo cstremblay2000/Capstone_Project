@@ -1,0 +1,846 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "name": "X800-X850",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X802",
+          "dataType": "Boolean",
+          "name": "X802",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X832",
+          "dataType": "Boolean",
+          "name": "X832",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X806",
+          "dataType": "Boolean",
+          "name": "X806",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X819",
+          "dataType": "Boolean",
+          "name": "X819",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X814",
+          "dataType": "Boolean",
+          "name": "X814",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X809",
+          "dataType": "Boolean",
+          "name": "X809",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X805",
+          "dataType": "Boolean",
+          "name": "X805",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X847",
+          "dataType": "Boolean",
+          "name": "X847",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X807",
+          "dataType": "Boolean",
+          "name": "X807",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X831",
+          "dataType": "Boolean",
+          "name": "X831",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X821",
+          "dataType": "Boolean",
+          "name": "X821",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X848",
+          "dataType": "Boolean",
+          "name": "X848",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X834",
+          "dataType": "Boolean",
+          "name": "X834",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X841",
+          "dataType": "Boolean",
+          "name": "X841",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X823",
+          "dataType": "Boolean",
+          "name": "X823",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X839",
+          "dataType": "Boolean",
+          "name": "X839",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X803",
+          "dataType": "Boolean",
+          "name": "X803",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X816",
+          "dataType": "Boolean",
+          "name": "X816",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X837",
+          "dataType": "Boolean",
+          "name": "X837",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X829",
+          "dataType": "Boolean",
+          "name": "X829",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X826",
+          "dataType": "Boolean",
+          "name": "X826",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X820",
+          "dataType": "Boolean",
+          "name": "X820",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X840",
+          "dataType": "Boolean",
+          "name": "X840",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X800",
+          "dataType": "Boolean",
+          "name": "X800",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X846",
+          "dataType": "Boolean",
+          "name": "X846",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X827",
+          "dataType": "Boolean",
+          "name": "X827",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X850",
+          "dataType": "Boolean",
+          "name": "X850",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X824",
+          "dataType": "Boolean",
+          "name": "X824",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X845",
+          "dataType": "Boolean",
+          "name": "X845",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X811",
+          "dataType": "Boolean",
+          "name": "X811",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X843",
+          "dataType": "Boolean",
+          "name": "X843",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X818",
+          "dataType": "Boolean",
+          "name": "X818",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X833",
+          "dataType": "Boolean",
+          "name": "X833",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X801",
+          "dataType": "Boolean",
+          "name": "X801",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X825",
+          "dataType": "Boolean",
+          "name": "X825",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X813",
+          "dataType": "Boolean",
+          "name": "X813",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X836",
+          "dataType": "Boolean",
+          "name": "X836",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X808",
+          "dataType": "Boolean",
+          "name": "X808",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X804",
+          "dataType": "Boolean",
+          "name": "X804",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X828",
+          "dataType": "Boolean",
+          "name": "X828",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X812",
+          "dataType": "Boolean",
+          "name": "X812",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X838",
+          "dataType": "Boolean",
+          "name": "X838",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X830",
+          "dataType": "Boolean",
+          "name": "X830",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X822",
+          "dataType": "Boolean",
+          "name": "X822",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X810",
+          "dataType": "Boolean",
+          "name": "X810",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X844",
+          "dataType": "Boolean",
+          "name": "X844",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X817",
+          "dataType": "Boolean",
+          "name": "X817",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X842",
+          "dataType": "Boolean",
+          "name": "X842",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X835",
+          "dataType": "Boolean",
+          "name": "X835",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X849",
+          "dataType": "Boolean",
+          "name": "X849",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]X815",
+          "dataType": "Boolean",
+          "name": "X815",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "Y800-Y850",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y822",
+          "dataType": "Boolean",
+          "name": "Y822",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y831",
+          "dataType": "Boolean",
+          "name": "Y831",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y847",
+          "dataType": "Boolean",
+          "name": "Y847",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y832",
+          "dataType": "Boolean",
+          "name": "Y832",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y805",
+          "dataType": "Boolean",
+          "name": "Y805",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y811",
+          "dataType": "Boolean",
+          "name": "Y811",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y816",
+          "dataType": "Boolean",
+          "name": "Y816",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y841",
+          "dataType": "Boolean",
+          "name": "Y841",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y833",
+          "dataType": "Boolean",
+          "name": "Y833",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y806",
+          "dataType": "Boolean",
+          "name": "Y806",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y821",
+          "dataType": "Boolean",
+          "name": "Y821",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y846",
+          "dataType": "Boolean",
+          "name": "Y846",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y848",
+          "dataType": "Boolean",
+          "name": "Y848",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y850",
+          "dataType": "Boolean",
+          "name": "Y850",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y800",
+          "dataType": "Boolean",
+          "name": "Y800",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y809",
+          "dataType": "Boolean",
+          "name": "Y809",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y825",
+          "dataType": "Boolean",
+          "name": "Y825",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y834",
+          "dataType": "Boolean",
+          "name": "Y834",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y813",
+          "dataType": "Boolean",
+          "name": "Y813",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y817",
+          "dataType": "Boolean",
+          "name": "Y817",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y812",
+          "dataType": "Boolean",
+          "name": "Y812",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y819",
+          "dataType": "Boolean",
+          "name": "Y819",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y838",
+          "dataType": "Boolean",
+          "name": "Y838",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y807",
+          "dataType": "Boolean",
+          "name": "Y807",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y824",
+          "dataType": "Boolean",
+          "name": "Y824",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y842",
+          "dataType": "Boolean",
+          "name": "Y842",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y803",
+          "dataType": "Boolean",
+          "name": "Y803",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y820",
+          "dataType": "Boolean",
+          "name": "Y820",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y802",
+          "dataType": "Boolean",
+          "name": "Y802",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y814",
+          "dataType": "Boolean",
+          "name": "Y814",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y828",
+          "dataType": "Boolean",
+          "name": "Y828",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y818",
+          "dataType": "Boolean",
+          "name": "Y818",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y845",
+          "dataType": "Boolean",
+          "name": "Y845",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y840",
+          "dataType": "Boolean",
+          "name": "Y840",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y815",
+          "dataType": "Boolean",
+          "name": "Y815",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y835",
+          "dataType": "Boolean",
+          "name": "Y835",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y826",
+          "dataType": "Boolean",
+          "name": "Y826",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y808",
+          "dataType": "Boolean",
+          "name": "Y808",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y829",
+          "dataType": "Boolean",
+          "name": "Y829",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y810",
+          "dataType": "Boolean",
+          "name": "Y810",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y843",
+          "dataType": "Boolean",
+          "name": "Y843",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y837",
+          "dataType": "Boolean",
+          "name": "Y837",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y827",
+          "dataType": "Boolean",
+          "name": "Y827",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y830",
+          "dataType": "Boolean",
+          "name": "Y830",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y801",
+          "dataType": "Boolean",
+          "name": "Y801",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y807",
+          "dataType": "Boolean",
+          "name": "Y851",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y804",
+          "dataType": "Boolean",
+          "name": "Y804",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y836",
+          "dataType": "Boolean",
+          "name": "Y836",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y839",
+          "dataType": "Boolean",
+          "name": "Y839",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y823",
+          "dataType": "Boolean",
+          "name": "Y823",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y849",
+          "dataType": "Boolean",
+          "name": "Y849",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[openplc]Y844",
+          "dataType": "Boolean",
+          "name": "Y844",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder"
+    }
+  ]
+}
