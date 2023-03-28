@@ -94,5 +94,80 @@ This computer acts as the Ignition Gateway server. It will have an instance of I
 
 	![Ignition Tool Bar](./pics/ignition-tool-bar.png)
 	
+10. Try clicking the buttons and see if the machine moves around in FactoryIO
+	
 # Running the Exploit
-to run the exploit
+
+## File Overview
+
+| File | Description |
+| --- | --- |
+| `final_exploit.py` | The driver program that runs the exploit, and links all the modules together |
+| `cam_overflow.py` | The module that contains the CAM overflow logic |
+| `arp_spoof.py` | The module that contains the arp spoofing/poisoning logic | 
+| `modbus_hijack.py` | The module that contains the modbus hijacking logic |
+| `color_prefixes.py` | Python file that contains constants for terminal colors |
+| `enable_ip_forward.sh` | Shell script to enable IPv4 Forwarding to facilitate smooth operation of arp spooging |
+| `disable_ip_forward.sh` | Shell script to disable IPv4 forwarding upon termination of the program |
+| `iptables_to_netfilter_queue.sh` | Shell script that adds an ip tables rule to filter TCP traffic to a NetfilterQueue |
+| `iptables_no_netfilter_queue.sh` | Shell script to flush iptables rules |
+
+## Usage  Message
+```
+usage: final_exploit.py [-h] [-i IGNITION_HOSTNAME] [-p PLC_HOSTNAME] [-M SWITCH_MEM] [-d CO_DST_IP]
+                        [-s CO_SRC_IP]
+                        {network interfaces}
+
+Ignition MITM Attack Suite. Capstone Project Spring 2023.
+
+positional arguments:
+  {network interfaces}
+                        Network interface to use for sniffing
+
+options:
+  -h, --help            show this help message and exit
+  -i IGNITION_HOSTNAME, --ignition-hostname IGNITION_HOSTNAME
+                        Hostname of Ignition Gateway server
+  -p PLC_HOSTNAME, --plc-hostname PLC_HOSTNAME
+                        Hostname of PLC
+  -M SWITCH_MEM, --switch-mem SWITCH_MEM
+                        Size of switch CAM in Kilobytes, for CAM Overflow attack. Just tells you when
+                        CAM Table is probably overflowed
+  -d CO_DST_IP, --dst-ip CO_DST_IP
+                        Destination IP Address Field for ARP packet in CAM Overflow attack
+  -s CO_SRC_IP, --src-ip CO_SRC_IP
+                        Source IP Address Field for ARP packet in CAM Overflow attack
+
+Author: Chris Tremblay <cst1465@rit.edu>
+
+```
+
+## How to run
+- To run the program you will need to be a root user
+- `sudo su`
+- `python final_exploit.py <network interface>`
+	- use the `-h` option flag to see a list of your network interfaces
+- It relieves headaches when running from a root user account rather than trying to run `sudo python final_exploit.py`
+
+## Description of attacks
+
+### CAM overflow
+To perform a CAM overflow attack at the menu, select 1. The progam will prompt you for fields to populate the ARP packets with. The program will then perform a CAM Overflow attack so that the swtich may turn into a hub and you can see the traffic between devices. 
+
+These values can also be configured with the `-d`, `-s`, and `-M` option flags.
+
+### ARP Poisoning
+Once you have learned the IP Address of the Ignition Server and PLC, an ARP poisoning attack can be performed. The ARP poisoning attack will enable IPv4 forwarding to keep communication between the devices uninterrupted. It will then send gratuitous ARP replies to the PLC and Ignition to map the attacker MAC to their IPs. 
+
+The Ignition and PLC IPs can be set with the `-i` and `-p` option flags respectively.
+
+### Modbus Hijacking
+Once the ARP Poisoning attack is running, the Modbus hijacking attack can happen. This attack will create an `iptables` rule that sends all TCP traffic to a NetfilterQueue. The program will drop all Modbus `write single coil` request packets, and accept any other packet. Upon reception of a dropped Modbus request, a new packet will be crafted that will contain the opposite value of what the write request was doing (ex. a write request to turn a coil on, now turns it off). This malicous packet will be sent off to the PLC. When the PLC sends it's response back, it will be intercepted and the original modbus payload from the original request will be loaded back in to make it appear that the value was correctly written to. A modbus response payload will always be an echo of the request payload, so the request payload must be saved to accurately fool Ignition when the PLCs response is sent. 
+
+# Notes and Disclaimers
+- This is a proof of concept code, meant for educational purposes only. I am not responsible for anything you do with it. 
+- As a condition for use of this code, you will not use it for any **unlawful or malicious** activities.
+- I **do not** condone malicious behavior of any kind
+- I **do** believe in strengthening the security community through knowledge sharing, and by learning security skills through safe and legal practices. 
+- There may be small bugs, and it does not have commercial fit and finish. Software is as-is.
+- I will probably not be supporting it beyond completion of my Masters degree.
