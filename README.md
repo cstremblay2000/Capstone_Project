@@ -30,6 +30,7 @@ These are instructions for installing FactoryIO and OpenPLC on the same machine.
 	- Since FactoryIO and OpenPLC are living on the same machinewe need to choose a different port than 502 (mbap) for them to communicate on to avoid conflicts.
 	![OpenPLC Slave settings](./pics/openplc-slave-networking.png)
 5. Once the networking settings are added we need to add the registers.
+
 |  Address Type  | Start | Size |
 |------------------------|---------|---------|
 | Discrete Inputs (%IX100.0) | 0 | 16 |
