@@ -94,4 +94,5 @@ This computer acts as the Ignition Gateway server. It will have an instance of I
 
 	![Ignition Tool Bar](./pics/ignition-tool-bar.png)
 	
-#Running the Exploit
+# Running the Exploit
+to run the exploit
