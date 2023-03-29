@@ -152,7 +152,7 @@ Author: Chris Tremblay <cst1465@rit.edu>
 ## Description of attacks
 
 ### CAM overflow
-To perform a CAM overflow attack at the menu, select 1. The progam will prompt you for fields to populate the ARP packets with. The program will then perform a CAM Overflow attack so that the swtich may turn into a hub and you can see the traffic between devices. 
+The progam will prompt you for fields to populate the ARP packets with. The program will then perform a CAM Overflow attack so that the swtich may turn into a hub and you can see the traffic between devices. 
 
 These values can also be configured with the `-d`, `-s`, and `-M` option flags.
 
