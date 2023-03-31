@@ -71,7 +71,9 @@ This computer acts as the Ignition Gateway server. It will have an instance of I
 5. Click `Add Device`
 	- If that option is not present, click `Configuration` in the top right corner.
 6. Mimic the settings from the image below, being sure to change the IP address to the one of WIndows Machine 1. Then click `Save`
+
 	![FactoryIO Device Settings](./pics/ignition-device-settings.png)
+	
 7. Once the device is created, click the `More` dropdown and select `Addresses`
 8. Click on `Browse...` and select the [modbus_config.csv](./ignition_solutions/modbus-config.csv) within this repository. 
 9. Import this file and click `Save` at the bottom.
