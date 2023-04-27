@@ -3,7 +3,7 @@ This code is for my Computing Security Masters Capstone Project of Spring 2023 a
 
 [Jump to exploit usage section](#Running-the-Exploit)
 
-Check out my [project poster](./documents/poster.pdf)
+Check out my final [project poster](./documents/poster.pdf) and my [paper](./documents/paper.pdf)
 
 # How to configure your environment
 The test environment used was 2 Windows 10 PCs, a Linux machine, and a Cisco 3550 Multi-Layer Switch.
